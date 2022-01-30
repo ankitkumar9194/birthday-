@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Slab"
+      rel="stylesheet"
+    />
+    <title>Creative Card</title>
+    <style type="text/css">
+      {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Slab", serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(https://i.postimg.cc/pLT9CZKK/Whats-App-Image-2022-01-22-at-5-30-07-PM.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 360px;
+  height: 560px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.sides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(https://i.postimg.cc/WbsqFj3W/Whats-App-Image-2022-01-22-at-5-30-08-PM.jpg) no-repeat;
+  background-size: cover;
+  background-position-x: 0;
+  width: 50%;
+  height: 100%;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  transition: transform 1s;
+}
+
+.right-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(https://i.postimg.cc/NG6rjLg2/Whats-App-Image-2022-01-22-at-5-30-07-PM-1.jpg) no-repeat;
+  background-size: cover;
+  background-position-x: -75px;
+  width: 50%;
+  height: 100%;
+  transform: rotateY(0deg);
+  transform-origin: right;
+  transition: transform 1s;
+}
+
+.back-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url(https://i.postimg.cc/65z2CS49/Whats-App-Image-2022-01-22-at-5-30-14-PM.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transform: translateZ(-300px);
+  box-shadow: 40px 40px 80px #000;
+  transition: z-index 0.4s step-end, transform 1s, box-shadow 1s;
+}
+
+.card:hover .left-side {
+  transform: rotateY(-360deg);
+}
+
+.card:hover .right-side {
+  transform: rotateY(360deg);
+}
+
+.card:hover .back-side {
+  transform: translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.name {
+  color: #fff;
+  font-size: 35px;
+  margin: 20px 5px;
+}
+
+.profession {
+  color: #eee;
+  font-size: 25px;
+  position: absolute;
+  margin-top: 320px;
+  margin-left: 80px;
+ 
+}
+
+.left-side .name,
+.left-side .profession {
+  text-align: right;
+}
+
+.biography {
+  color: #fff;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="sides left-side">
+          <h1 class="name">Happy</h1>
+        </div>
+         <center><h3 class="profession">Bestie <i style="color:  #8F00FF" class="fa fa-heart"></i> </h3></center>
+        <div class="sides right-side">
+          <h1 class="name">Birthday</h1>
+        </div>
+        <div class="back-side">
+          <p class="biography">
+            A wish for you on your birthday, whatever you ask may you receive, whatever you seek may you find, whatever you wish may it be fulfilled on your birthday and always. Happy birthday!
+          I will be there with you in your side whenever you seek me.
+         always.
+                    Enjoy your Day . Stay Blessed nd Happy . Keep Smiling :)
+           Neha</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
